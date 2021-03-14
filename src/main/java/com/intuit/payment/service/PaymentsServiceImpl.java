@@ -32,6 +32,7 @@ public class PaymentsServiceImpl implements PaymentsService{
             }
             return savedPaymentId;
         } catch (AmqpException ex) {
+            ex.printStackTrace();
             return null;
         }
     }

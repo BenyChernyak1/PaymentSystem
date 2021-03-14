@@ -18,7 +18,7 @@ public class RiskEngineImpl implements RiskEngine{
     @Override
     public String savePayment(Payment payment) {
         Random rand = new Random();
-        if (rand.nextInt(100) < 70) {
+        if (rand.nextInt(Constants.ALL_PAYMENT_PERCENTAGE) < Constants.ALLOW_PAYMENT_PERCENTAGE) {
             payment.setId(UUID.randomUUID().toString());
             Payment savedPayment = paymentRepository.save(payment);
             return savedPayment.getId();
