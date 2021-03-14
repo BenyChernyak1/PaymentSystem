@@ -19,6 +19,9 @@ As a customer, I'd like to pay other customers for various services or products 
 * Set up a values for Payment Entity JSON model (*id* is optional, no need to set up a value for it, it would be generated before saving into the DB).
 * Execute the REST call.
 
+## Payment Entity JSON Example
+{  "amount": 70.5,  "currency": "USD",  "userId": "e8af92bd-1910-421e-8de0-cb3dcf9bf44d", "payeeId": "4c3e304e-ce79-4f53-bb26-4e198e6c780a", "paymentMethodId": "8e28af1b-a3a0-43a9-96cc-57d66dd68294"}
+
 ## Check the DB
 * In this solution *MariaDB* was used as a database (*InnoDB* as an engine).
 * Use any client with following connection details:
